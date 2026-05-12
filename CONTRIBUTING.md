@@ -1,4 +1,4 @@
-# Contributing to [Project Name]
+# Contributing to the Project
 
 First off, thank you for considering contributing to this project! This document outlines the standard process for working on the codebase, our branching strategy, and how to handle common Git issues.
 
@@ -8,9 +8,7 @@ First off, thank you for considering contributing to this project! This document
    ```bash
    git clone [Your Repository URL]
    cd [Your Repository Name]
-   
-
-```
+   ```
 
 2. **Install dependencies / Setup:**
 *(Add any specific instructions here, like `npm install`, `pip install -r requirements.txt`, etc.)*
@@ -27,7 +25,6 @@ Before starting any new work, make sure your local `dev` branch is up to date:
 ```bash
 git checkout dev
 git pull origin dev
-
 ```
 
 ### 2. Create a new branch
@@ -40,7 +37,6 @@ Create a new branch for your specific feature or bug fix. Use a descriptive nami
 
 ```bash
 git checkout -b feature/your-feature-name
-
 ```
 
 ### 3. Make your changes and commit
