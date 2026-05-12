@@ -1,2 +1,4 @@
 SpeechRecognition
 pyaudio
+vosk
+sounddevice
