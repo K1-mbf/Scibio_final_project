@@ -80,13 +80,8 @@ Working with Git in a team almost always leads to a few hiccups. Here is how to 
 ```bash
 git checkout feature/your-feature-name
 git pull origin dev
-
-
 ```
 
-
-
-```
 3. Open the conflicting files in your code editor (like VS Code). You will see markers like `<<<<<<< HEAD`, `=======`, and `>>>>>>> dev`.
 4. Manually edit the file to keep the correct code, and delete the `<<<<<<<`, `=======`, and `>>>>>>>` markers.
 5. Save the file, commit the resolution, and push:
@@ -94,9 +89,7 @@ git pull origin dev
    git add .
    git commit -m "Fix merge conflicts with dev"
    git push origin feature/your-feature-name
-   
-
-```
+   ```
 
 ### Problem 2: "My branch is behind `dev`"
 
