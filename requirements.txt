@@ -2,3 +2,4 @@ SpeechRecognition
 pyaudio
 vosk
 sounddevice
+pygame
