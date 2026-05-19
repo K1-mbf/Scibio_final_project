@@ -55,5 +55,5 @@ with sd.RawInputStream(
 
                     if command in text.split():
 
-                        print(f"Valid command: {command}")
+                        print(f"Valid command ✅​: {command}")
                         break
