@@ -35,6 +35,7 @@ VOICE_COMMANDS = {
     "down": "DOWN",
     "left": "LEFT",
     "right": "RIGHT",
+    "exit": "EXIT",
 }
 # ==========================================
 
@@ -59,11 +60,12 @@ class VoiceController:
         self.thread.start()
 
     def _listen_loop(self):
-        print("Loading Vosk model...")
+        # print("Loading Vosk model...")
         model = Model(MODEL_PATH)
         recognizer = KaldiRecognizer(model, SAMPLERATE)
 
         print("Voice control started. Say: up, down, left, right")
+        print("Press CTRL + C or say 'exit' to stop.")
 
         with sd.RawInputStream(
             samplerate=SAMPLERATE,
@@ -297,13 +299,29 @@ class Game:
         """Main game loop."""
         while True:
             action = self.get_action()
+
+            if action == "EXIT":
+                print("Exiting game...")
+                break
+
             self.apply_action(action)
 
             if self.player_x == self.goal_x and self.player_y == self.goal_y:
                 print("Goal Reached!")
-
+                self.draw()
+                pygame.display.flip()
+                pygame.time.delay(2000)
+                self.restart_level()
             self.draw()
             self.clock.tick(FPS)
+
+    def restart_level(self):
+        """Starts a new maze after the goal was reached."""
+        self.maze = Maze(MAZE_COLS, MAZE_ROWS)
+        self.player_x = START_X
+        self.player_y = START_Y
+        self.goal_x = 0
+        self.goal_y = 0
 
 
 if __name__ == "__main__":

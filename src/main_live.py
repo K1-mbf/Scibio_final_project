@@ -10,7 +10,7 @@ from vosk import Model, KaldiRecognizer
 MODEL_PATH = "vosk-model-small-en-us-0.15"
 
 # List of valid voice commands that the program accepts
-COMMANDS = ["up", "down", "left", "right"]
+COMMANDS = ["up", "down", "left", "right", "exit"]
 
 # Audio sample rate required by the Vosk model
 SAMPLERATE = 16000
@@ -38,8 +38,8 @@ recognizer = KaldiRecognizer(model, SAMPLERATE)
 
 # Display instructions for the user
 print("Live speech recognition started.")
-print("Say: up, down, left, or right")
-print("Press CTRL + C to stop.")
+print("Say: up, down, left or right.")
+print("Press CTRL + C or say 'exit' to stop.")
 
 
 # Open the microphone audio stream
