@@ -5,8 +5,8 @@ import random
 # ==========================================
 # CONFIGURATION & SETTINGS
 # ==========================================
-MAZE_COLS = 5          
-MAZE_ROWS = 5          
+MAZE_COLS = 20       
+MAZE_ROWS = 20      
 CELL_SIZE = 40          
 
 # Dynamically calculate the center for the start position
