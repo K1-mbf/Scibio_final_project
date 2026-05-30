@@ -23,21 +23,6 @@ pip install -r requirements.txt
 python maze_voice_control.py
 ```
 
-### Keyboard-Only Game
-```bash
-python game.py
-```
-
-### Live Speech Recognition Test
-```bash
-python src/main_live.py
-```
-
-### One-Time Speech Recognition Test
-```bash
-python src/main_once.py
-```
-
 ## Voice Commands
 
 ```text
@@ -54,12 +39,12 @@ exit
 maze_voice_control/
 │
 ├── maze_voice_control.py   # Main voice-controlled maze game
-├── game.py                 # Keyboard-only maze game
 ├── requirements.txt        # Python dependencies
 │
-├── src/
-│   ├── main_live.py        # Live offline speech recognition
-│   └── main_once.py        # Single speech recognition test
+├── doc/
+│   ├── Report.docx         # Final Report
+│   ├── Presentation.pptx   # Final Presentation
+│   └── Project Plan.xlsx   # Gantt Diagramm of project plan
 │
 └── vosk-model-small-en-us-0.15/   # Offline Vosk model
 ```
@@ -72,15 +57,6 @@ Main application:
 - Pygame rendering
 - Voice recognition
 - Player movement
-
-### `game.py`
-Keyboard-controlled version for testing gameplay without voice input.
-
-### `src/main_live.py`
-Continuous real-time speech recognition using Vosk.
-
-### `src/main_once.py`
-One-time speech recognition using Google Speech API.
 
 ### `requirements.txt`
 Contains required Python packages.
